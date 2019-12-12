@@ -11,8 +11,53 @@
 </head>
 
 <body>
-  
-  
+    <header class="header">
+        <nav class="navigation">
+            <button class="navigation_create">
+                <img src="https://img.icons8.com/color/48/000000/plus-math.png" class="plus">
+                Create
+            </button>
+            <button class="navigation_today">Today</button>
+            <div class="navigation__arows">
+                <div class="navigation__arows_left"></div>
+                <div class="navigation__arows_right"></div>
+            </div>
+            <div class="navigation__MonthAndYear">
+                <span class="monthNow">Dec</span>
+                <span class="mounthFutuar"></span>
+                <span class="year">2019</span>
+            </div>
+        </nav>
+        <div class="week"></div>
+
+    </header>
+
+   
+
+    <div class="popup-layer display-none">
+      <form class="popup event" data-id-event="">
+          <span class="popup__btn-close"><img class="close" src="https://img.icons8.com/color/48/000000/close-window.png"></span>
+          <input class="event__name" name="eventName" type="text" required placeholder="Добавьте  название">
+          <div class="popup__picker">
+              <img class="clock" src="https://img.icons8.com/pastel-glyph/64/000000/time.png">
+              <input class="event__date-start" name="eventDateStart" required type="date">
+              <select class="event__time-start select" size="1" name="eventTimeStart" required></select>
+              <span class='line'></span>
+              <select class="event__time-end select" name="eventTimeEnd" required></select>
+              <input class="event__date-end" name="eventDateEnd" required type="date">
+          </div>
+          <img class="multilineText" src="https://img.icons8.com/windows/32/000000/multiline-text.png">
+          <textarea class="event__description" name="eventDescription" cols="15" rows="5"
+              placeholder="Добавьте описание"></textarea>
+          <div class="footer-popup">
+              <span class="event__btn-delete"><img class="bascket"
+                      src="https://img.icons8.com/windows/32/000000/trash.png"></span>
+              <button class="event__btn-save">Сохрнить</button>
+          </div>
+      </form>
+  </div>
+
+    
     <script src="src/scripts/index.js" type="module"></script>
 </body>
 

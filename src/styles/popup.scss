@@ -1,0 +1,127 @@
+.popup-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #89898961;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px 16px 8px;
+    border-radius: 8px;
+    text-align: right;
+    background-color: #fff;
+}
+
+.event__name {
+    border: none;
+    border-bottom: 2px solid #d5d5d5;
+    width: 90%;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-style: italic;
+    outline: none;
+    margin-top: 30px;
+}
+
+.popup__picker {
+    display: flex;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    align-items: center;
+    position: relative;
+}
+
+.event__date-start,
+.event__date-end {
+    padding: 2px;
+    margin-left: 18px;
+    border: none;
+    background-size: contain;
+    outline: none;
+    width: 150px;
+}
+
+.event__time-start,
+.event__time-end {
+    border: none;
+    background-size: contain;
+    outline: none;
+    padding: 2px;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.event__description {
+    border: none;
+    width: 90%;
+    outline: none;
+    resize: none;
+}
+
+.footer-popup {
+    position: relative;
+    height: 40px;
+    display: flex;
+}
+
+.event__btn-save {
+    position: absolute;
+    right: 5px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: royalblue;
+    color: white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup__btn-close {
+    position: absolute;
+    right: 10px;
+    top: -3px;
+}
+
+.clock {
+    width: 25px;
+    height: 25px;
+}
+
+.line {
+    left: 237px;
+    width: 8px;
+    margin: 0 5px;
+    border-top: 2px solid black;
+}
+
+.multilineText {
+    position: absolute;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.bascket {
+    cursor: pointer;
+}
+
+.invalid {
+    border: 1px solid red;
+}

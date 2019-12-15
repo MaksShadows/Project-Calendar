@@ -124,7 +124,11 @@
   color: white;
 }
 
-.popup-layer {
+.display {
+  display: none;
+}
+
+.popup-window {
   position: absolute;
   top: 0;
   left: 0;

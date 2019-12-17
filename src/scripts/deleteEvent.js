@@ -1,21 +1,21 @@
-import {  getEventById } from './storage.js';
+// import {  getEventById } from './storage.js';
 
-const deleteButton = document.querySelector('.event__btn-delete');
+// const deleteButton = document.querySelector('.event__btn-delete');
 
-function deleteObjectEvent() {
-    deleteButton.addEventListener('click', deleteSelectedEvent);
-};
+// function deleteObjectEvent() {
+//     deleteButton.addEventListener('click', deleteSelectedEvent);
+// };
 
-function deleteSelectedEvent(event) {
-    const idEvent = event.target.closest('.popup').dataset.idEvent;
+// function deleteSelectedEvent(event) {
+//     const idEvent = event.target.closest('.popup').dataset.idEvent;
 
-    const selectedEvent = getEventById(+idEvent);
+//     const selectedEvent = getEventById(+idEvent);
 
-    if (selectedEvent.startDate - new Date() ) {
-        alert('Вы не можете удалить событие раньше чем за 15 мин до начала!!!!');
-        return;
-    };
+//     if (selectedEvent.startDate - new Date() ) {
+//         alert('Вы не можете удалить событие раньше чем за 15 мин до начала!!!!');
+//         return;
+//     };
 
-}
+// }
 
-export { deleteObjectEvent };
+// export { deleteObjectEvent };

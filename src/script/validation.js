@@ -1,6 +1,6 @@
 import { getEvents } from './storage.js';
 
-function validationEvents(eventStart, eventEnd, idEvent) {
+function validationIntersectionEvents(eventStart, eventEnd, idEvent) {
 
     const existingEvent = getEvents().find(event => {
         if (idEvent !== '' && event.id === +idEvent) return false;
@@ -11,4 +11,4 @@ function validationEvents(eventStart, eventEnd, idEvent) {
     return existingEvent;
 };
 
-export { validationEvents };
+export { validationIntersectionEvents };

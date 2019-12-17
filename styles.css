@@ -1,4 +1,14 @@
-.navigation {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+}
+
+.navigate {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -7,7 +17,7 @@
   border-bottom: 1px solid #d5d5d5;
   padding-bottom: 10px;
 }
-.navigation_create {
+.navigate_create {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,11 +31,11 @@
   margin-right: 50px;
   font-size: 18px;
 }
-.navigation_create:hover {
+.navigate_create:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 15px 15px rgba(0, 0, 0, 0.22);
   transition: 1s;
 }
-.navigation_today {
+.navigate_today {
   border: 1px solid grey;
   border-radius: 3px;
   height: 40px;
@@ -35,16 +45,16 @@
   margin-right: 50px;
   font-weight: 700;
 }
-.navigation_today:hover {
+.navigate_today:hover {
   background-color: #d5d5d5;
   transition: 1s;
 }
 
-.navigation__arows {
+.navigate__arows {
   display: flex;
   margin-right: 50px;
 }
-.navigation__arows_right {
+.navigate__arows_right {
   background-image: url("https://img.icons8.com/material-sharp/24/000000/forward.png");
   width: 35px;
   height: 35px;
@@ -52,11 +62,11 @@
   background-position: center;
   background-size: auto;
 }
-.navigation__arows_right:hover {
+.navigate__arows_right:hover {
   background-color: #D3D3D3;
   transition: 1s;
 }
-.navigation__arows_left {
+.navigate__arows_left {
   background-image: url("https://img.icons8.com/material-sharp/24/000000/forward.png");
   width: 35px;
   height: 35px;
@@ -65,12 +75,12 @@
   background-position: center;
   background-size: auto;
 }
-.navigation__arows_left:hover {
+.navigate__arows_left:hover {
   background-color: #D3D3D3;
   transition: 1s;
 }
 
-.navigation__MonthAndYear {
+.navigate__MonthAndYear {
   font-size: 24px;
   font-weight: 500;
 }
@@ -124,11 +134,51 @@
   color: white;
 }
 
-.display {
+.main {
+  height: calc(100vh - 171px);
+  overflow: auto;
+}
+
+.schedule {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  color: #70757a;
+}
+.sidebar :first-child .hour__text {
   display: none;
 }
 
-.popup-window {
+.hour {
+  height: 42px;
+  width: 55px;
+}
+.hour__text {
+  display: block;
+  margin: -9px 0 0 10px;
+}
+
+.days {
+  display: flex;
+  width: 100%;
+  padding-left: 5px;
+  background: repeating-linear-gradient(180deg, #dadce0, #dadce0 1px, #fff 1px, #fff 42px);
+}
+
+.column-day {
+  position: relative;
+  width: 100%;
+  border-left: 1px solid #dadce0;
+}
+
+.display-none {
+  display: none;
+}
+
+.popup-alert {
   position: absolute;
   top: 0;
   left: 0;
@@ -147,6 +197,24 @@
   text-align: right;
   background-color: #fff;
 }
+.popup__picker {
+  display: flex;
+  margin: 45px 0;
+  align-items: center;
+  position: relative;
+}
+.popup__color-picker {
+  margin: 45px 0 0 45px;
+  text-align: left;
+}
+.popup__color-picker_label-text {
+  margin-right: 15px;
+}
+.popup__btn-close {
+  position: absolute;
+  right: 10px;
+  top: -3px;
+}
 
 .event__name {
   border: none;
@@ -158,17 +226,7 @@
   outline: none;
   margin-top: 30px;
 }
-
-.popup__picker {
-  display: flex;
-  margin-top: 90px;
-  margin-bottom: 90px;
-  align-items: center;
-  position: relative;
-}
-
-.event__date-start,
-.event__date-end {
+.event__date-start, .event__date-end {
   padding: 2px;
   margin-left: 18px;
   border: none;
@@ -176,9 +234,7 @@
   outline: none;
   width: 150px;
 }
-
-.event__time-start,
-.event__time-end {
+.event__time-start, .event__time-end {
   border: none;
   background-size: contain;
   outline: none;
@@ -188,20 +244,12 @@
   -moz-appearance: none;
   appearance: none;
 }
-
 .event__description {
   border: none;
   width: 90%;
   outline: none;
   resize: none;
 }
-
-.footer-popup {
-  position: relative;
-  height: 40px;
-  display: flex;
-}
-
 .event__btn-save {
   position: absolute;
   right: 5px;
@@ -216,10 +264,10 @@
   cursor: pointer;
 }
 
-.popup__btn-close {
-  position: absolute;
-  right: 10px;
-  top: -3px;
+.footer-popup {
+  position: relative;
+  height: 40px;
+  display: flex;
 }
 
 .clock {
@@ -256,14 +304,19 @@
   border: 1px solid red;
 }
 
-* {
-  box-sizing: border-box;
+.day-event {
+  position: absolute;
+  min-height: content;
+  width: 100%;
+  padding: 4px;
+  border-radius: 3px;
+  background-color: #4183f1;
+  font-size: 14px;
+  color: white;
 }
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Roboto;
+.day-event__title {
+  height: 16px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */

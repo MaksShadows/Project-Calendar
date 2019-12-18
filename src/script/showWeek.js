@@ -5,7 +5,6 @@ function showWeek() {
     days.innerHTML = '';
     let weekday = getShowedMonday();
     const arrDaysElems = [];
-    const arrMonthes = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const arrNamesWeekdays = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
     const headerWeek = document.querySelector('.week');
     const titleHeader = document.querySelector('.navigate__MonthAndYear');
@@ -37,7 +36,7 @@ function showWeek() {
     titleHeader.textContent = titleHeaderText;
     headerWeek.innerHTML = headerWeekHTML;
     days.append(...arrDaysElems);
-    showEvents();
+
 };
 
 function getNextDate(day) {

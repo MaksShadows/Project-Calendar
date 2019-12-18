@@ -1,4 +1,4 @@
-import { getEventById } from './storage.js';
+
 import { createSelectTime } from './createSelectTime.js';
 
 const scheduleDays = document.querySelector('.days');
@@ -23,9 +23,7 @@ function showPopupWindow() {
     navigateCreateButton.addEventListener('click', showPopup);
     buttonClose.addEventListener('click', showPopup);
     popupLayer.addEventListener('click', hendlerClick);
-    formFields.name.addEventListener('blur', validateValue);
-    formFields.dateStart.addEventListener('blur', validateValue);
-    formFields.dateEnd.addEventListener('blur', validateValue);
+ 
 };
 
 function hendlerClick(event) {
@@ -35,30 +33,14 @@ function hendlerClick(event) {
     }
 };
 
-function validateValue(event) {
-    if (!event.target.value) {
-        event.target.classList.add('invalid');
-        return;
-    }
-    event.target.classList.remove('invalid');
-};
 
 function showPopup() {
     createSelectTime(formFields.timeStart, formFields.timeEnd);
     popupLayer.classList.toggle('display-none');
 
-    idEventPopup.dataset.idEvent = '';
-    Object.values(formFields).map(field => {
-        field.classList.remove('invalid');
-
-        if (!field.classList.contains('select')) {
-            field.value = '';
-        };
-
-        if (field.classList.contains('event__color-picker')) {
-            field.value = '#4183f1';
-        };
-    });
+    if (!field.classList.contains('select')) {
+        field.value = '';
+    };
 
     deleteButton.style.display = 'none';
 };
@@ -69,9 +51,11 @@ function showEditPopup(event) {
 
     const idEvent = event.target.closest('.day-event').dataset.idEvent;
     idEventPopup.dataset.idEvent = idEvent;
+
     
 
 };
+
 
 
 export { showPopupWindow, showEditPopup };

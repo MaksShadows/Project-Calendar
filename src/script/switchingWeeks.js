@@ -21,13 +21,18 @@ function switchWeeks() {
         }
         if (event.target.classList.contains('navigate__arows_left')) {
             setShowedMonday(new Date(showedMondayInMs - SEVEN_DAYS));
-           setShowedMonday(getLastMonday());
         }
-    }
         if (event.target.classList.contains('navigate_today')) {
-  showWeek();
+            setShowedMonday(getLastMonday());
+        }
+        showWeek();
     };
 };
 
+function getLastMonday() {
+    let date = new Date();
+
+    return new Date(date.setDate(date.getDate() - (date.getDay() || 7) + 1));
+};
 
 export { switchWeeks };

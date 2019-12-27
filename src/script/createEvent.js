@@ -8,7 +8,6 @@ const formFields = {
     timeStart: document.querySelector('.event__time-start'),
     timeEnd: document.querySelector('.event__time-end'),
     description: document.querySelector('.event__description'),
-    color: document.querySelector('.event__color-picker'),
 };
 const btnSave = document.querySelector('.event__btn-save');
 
@@ -19,13 +18,8 @@ function createEvent() {
 function createObjectEvent(event) {
     event.preventDefault();
 
-    const invalidFields = Object.values(formFields).find(field => {
-        if (!field.classList.contains('event__description') &&
-            !field.classList.contains('event__color-picker') &&
-            !field.value) {
-            field.classList.add('invalid');
-            return true;
-        }
+const invalidFields = Object.values(formFields).find(field => {
+  
     });
 
     if (invalidFields) return;

@@ -1,5 +1,6 @@
-import { getShowedMonday, setShowedMonday } from './storage.js';
-import { showWeek } from './showWeek.js';
+export   const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
+
+
 
 function switchWeeks() {
     const arowsRight = document.querySelector('.navigate__arows_right');
@@ -9,30 +10,24 @@ function switchWeeks() {
     const buttonToday = document.querySelector('.navigate_today');
     buttonToday.addEventListener('click', moveWeek);
 
-    if(!getShowedMonday()) setShowedMonday(getLastMonday());
-    showWeek();
-    const SEVEN_DAYS = 24 * 60 * 60 * 1000 * 7;
+    function moveWeek() {
 
-    function moveWeek(event) {
-        let showedMondayInMs = getShowedMonday().getTime();
+        const newWeek = [...arrWeeks];
+        newWeek.map(dateOfDay => {
+            const newDate = dateOfDay.getDate();
+    
+            dateOfDay = new Date(dateOfDay.setDate(newDate + 7));
+            dateOfDay = new Date(dateOfDay.setDate(newDate - 7));
 
-        if (event.target.classList.contains('navigate__arows_right')) {
-            setShowedMonday(new Date(showedMondayInMs + SEVEN_DAYS));
-        }
-        if (event.target.classList.contains('navigate__arows_left')) {
-            setShowedMonday(new Date(showedMondayInMs - SEVEN_DAYS));
-        }
-        if (event.target.classList.contains('navigate_today')) {
-            setShowedMonday(getLastMonday());
-        }
+        });
+
+
         showWeek();
     };
+
+
 };
 
-function getLastMonday() {
-    let date = new Date();
 
-    return new Date(date.setDate(date.getDate() - (date.getDay() || 7) + 1));
-};
 
 export { switchWeeks };

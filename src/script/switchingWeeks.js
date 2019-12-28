@@ -9,7 +9,8 @@ function switchWeeks() {
     arowsLeft.addEventListener('click', moveWeek);
     const buttonToday = document.querySelector('.navigate_today');
     buttonToday.addEventListener('click', moveWeek);
-
+    
+    showWeek();
     function moveWeek() {
 
         const newWeek = [...arrWeeks];
@@ -19,8 +20,10 @@ function switchWeeks() {
             dateOfDay = new Date(dateOfDay.setDate(newDate + 7));
             dateOfDay = new Date(dateOfDay.setDate(newDate - 7));
 
-        });
+            showWeek(arrWeeks);
 
+        });
+        
 
         showWeek();
     };

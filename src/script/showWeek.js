@@ -1,20 +1,30 @@
- function showWeek () {
 
-   const weeks = document.querySelector('.days');
-    const arrWeeks =  ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
+function showWeek() {
+    const days = document.querySelector('.days');
+    days.innerHTML = '';
+    const arrElems = [];
+    const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
+    const headerWeek = document.querySelector('.week');
+    let headerWeekHTML = '';
 
+    for (let i = 0; i < 7; i++) {
+        const day = document.createElement('div');
 
-   for (let i = 0; i <= 7; i++) {
-      const week = document.createElement('div');
-         week.classList.add('day'); 
+        headerWeekHTML +=
+            `<div class="day">
+            <span class="day_nameDay">${arrWeeks[i]}</span>
+            </div>`;
+
         
-        arrWeeks.push(week);
-         weeks.append(week);
-     };
-     arrWeeks.push('day')
-      weeks.append(...arrWeeks);
-  };
+        arrElems.push(day);
+    }
 
- showWeek();
+    headerWeek.innerHTML = headerWeekHTML;
+    days.append(...arrElems);
+
+};
 
  export { showWeek };
+
+
+

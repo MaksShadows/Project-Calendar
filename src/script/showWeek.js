@@ -5,7 +5,7 @@ function showWeek() {
     const arrElems = [];
     const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
     const headerWeek = document.querySelector('.week');
-    let headerWeekHTML = '';
+    const headerWeekHTML = '';
 
     for (let i = 0; i < 7; i++) {
         const day = document.createElement('div');

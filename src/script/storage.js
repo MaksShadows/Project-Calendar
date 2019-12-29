@@ -42,6 +42,10 @@ function setShowedMonday(showedMonday) {
     updateLocalStorage('showedMonday', showedMonday);
 };
 
+function updateLocalStorage(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+};
+
 function getShowedMonday() {
     if (getItemLocalStorage('showedMonday')) {
         return new Date(getItemLocalStorage('showedMonday'));
@@ -49,10 +53,6 @@ function getShowedMonday() {
     return getItemLocalStorage('showedMonday');
 };
 
-
-function updateLocalStorage(key, value) {
-    localStorage.setItem(key, JSON.stringify(value));
-};
 
 function getItemLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key), reviver);

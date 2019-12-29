@@ -1,4 +1,4 @@
-export { getEvents, addEvent,  getEventById, deleteEvent,  setShowedMonday, getShowedMonday };
+export { getEvents, addEvent,  getEventById, deleteEvent,  };
 
 
 
@@ -38,30 +38,5 @@ function deleteEvent(idEvent) {
     updateLocalStorage('listEvents', listEvents)
 };
 
-function setShowedMonday(showedMonday) {
-    updateLocalStorage('showedMonday', showedMonday);
-};
-
-function updateLocalStorage(key, value) {
-    localStorage.setItem(key, JSON.stringify(value));
-};
-
-function getShowedMonday() {
-    if (getItemLocalStorage('showedMonday')) {
-        return new Date(getItemLocalStorage('showedMonday'));
-    }
-    return getItemLocalStorage('showedMonday');
-};
 
 
-function getItemLocalStorage(key) {
-    return JSON.parse(localStorage.getItem(key), reviver);
-};
-
-function reviver(key, value) {
-    if(['createDate', 'startDate', 'endDate'].includes(key)) {
-        return new Date(value);
-    }
-
-    return value;
-};

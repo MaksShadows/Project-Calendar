@@ -134,6 +134,46 @@ body {
   color: white;
 }
 
+.main {
+  height: calc(100vh - 171px);
+  overflow: auto;
+}
+
+.schedule {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  color: #70757a;
+}
+.sidebar :first-child .hour__text {
+  display: none;
+}
+
+.hour {
+  height: 42px;
+  width: 55px;
+}
+.hour__text {
+  display: block;
+  margin: -9px 0 0 10px;
+}
+
+.days {
+  display: flex;
+  width: 100%;
+  padding-left: 5px;
+  background: repeating-linear-gradient(180deg, #dadce0, #dadce0 1px, #fff 1px, #fff 42px);
+}
+
+.column-day {
+  position: relative;
+  width: 100%;
+  border-left: 1px solid #dadce0;
+}
+
 .display-none {
   display: none;
 }
@@ -296,36 +336,6 @@ body {
   height: 15px;
   border-radius: 50%;
   background-color: red;
-}
-
-.block {
-  display: flex;
-  justify-content: center;
-}
-
-.event {
-  margin-bottom: 100px;
-}
-
-.column {
-  display: flex;
-  width: 11%;
-  color: #70757a;
-  flex-direction: column;
-  height: 50px;
-  border-top: 1px solid #dadce0;
-  border-bottom: 1px solid #dadce0;
-  border-left: 3px solid #dadce0;
-  border-right: 1px solid #dadce0;
-}
-
-.week {
-  display: flex;
-}
-
-.day {
-  display: flex;
-  flex-direction: column;
 }
 
 /*# sourceMappingURL=styles.css.map */

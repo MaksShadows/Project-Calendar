@@ -4,28 +4,23 @@ function showWeek() {
     days.innerHTML = '';
     const arrElems = [];
     const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
-    const Week = document.querySelector('.week');
-    let WeekHTML = '';
+    const headerWeek = document.querySelector('.week');
+    let headerWeekHTML = '';
 
     for (let i = 0; i < 7; i++) {
-        const week = document.createElement('div');
-        week.classList.add('day'); 
+        const day = document.createElement('div');
 
-        WeekHTML +=
+        headerWeekHTML +=
             `<div class="day">
-            <span class="day_nameDay">${arrWeeks[i]}</span>
+                <span class="day_nameDay">${arrWeeks[i]}</span>
             </div>`;
-
-         day.classList.add('column-day');
-        arrElems.push(week);
+        day.classList.add('column-day');
+        arrElems.push(day);
     }
-
-    Week.innerHTML = WeekHTML;
+    headerWeek.innerHTML = headerWeekHTML;
     days.append(...arrElems);
-
 };
 
- export { showWeek };
 
 
-
+export { showWeek };

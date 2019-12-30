@@ -1,4 +1,4 @@
-export { getEvents, addEvent,  getEventById, deleteEvent,  };
+export { getEvents, addEvent,  getEventById, deleteEvent, getShowedMonday, setShowedMonday  };
 
 
 

@@ -320,8 +320,11 @@ body {
 }
 
 .redLine {
+  display: flex;
   position: absolute;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
   height: 2px;
   background-color: red;
 }

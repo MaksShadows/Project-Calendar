@@ -8,14 +8,14 @@ function showWeek() {
     let WeekHTML = '';
 
     for (let i = 0; i < 7; i++) {
-        const day = document.createElement('div');
+        const week = document.createElement('div');
 
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
             </div>`;
-        day.classList.add('column-day');
-        arrElems.push(day);
+            week.classList.add('column-day');
+            arrElems.push(week);
     }
     headerWeek.innerHTML = WeekHTML;
     days.append(...arrElems);

@@ -12,12 +12,12 @@
 
         for (let i = 0; i < 7; i++) {
         const week = document.createElement('div');
-        let Weeks = [];
+        let Weeks = getCurWeekDates();
       
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
-                <span class="day_nameDay">${Weeks[i]}</span>
+                <span class="day_nameDay">${Weeks[i].getDate()}</span>
                 <div class="LittleBorder"></div>
                 </div>`;
             week.classList.add('column-day');

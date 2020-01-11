@@ -4,6 +4,7 @@
     const days = document.querySelector('.days');
     days.innerHTML = '';
     const arrElems = [];
+    const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
     const headerWeek = document.querySelector('.week');
     let WeekHTML = '';
 
@@ -11,10 +12,11 @@
 
         for (let i = 0; i < 7; i++) {
         const week = document.createElement('div');
-        let Weeks = getCurWeekDates();
+        let Weeks = [];
       
         WeekHTML +=
             `<div class="day">
+                <span class="day_nameDay">${arrWeeks[i]}</span>
                 <span class="day_nameDay">${Weeks[i]}</span>
                 <div class="LittleBorder"></div>
                 </div>`;

@@ -17,7 +17,7 @@
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
-                <span class="day_nameDay">${Weeks[i].getDate()}</span>
+                <span class="day_nameDays">${Weeks[i].getDate()}</span>
                 <div class="LittleBorder"></div>
                 </div>`;
             week.classList.add('column-day');

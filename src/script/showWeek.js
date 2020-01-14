@@ -1,6 +1,6 @@
 
 
- function showWeek() {
+ function showWeek([] = getCurWeekDates()) {
     const days = document.querySelector('.days');
     days.innerHTML = '';
     const arrElems = [];

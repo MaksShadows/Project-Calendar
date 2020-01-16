@@ -1,4 +1,4 @@
-export { getEvents, addEvent,  getEventById, deleteEvent, getShowedMonday, setShowedMonday  };
+export { getEvents, addEvent,  getEventById, deleteEvent,  };
 
 
 
@@ -37,6 +37,4 @@ function deleteEvent(idEvent) {
 
     updateLocalStorage('listEvents', listEvents)
 };
-
-
 

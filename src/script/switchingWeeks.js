@@ -9,7 +9,7 @@ function switchWeeks() {
     const arowsLeft = document.querySelector('.navigate__arows_left');
     arowsLeft.addEventListener('click', moveWeek);
     const buttonToday = document.querySelector('.navigate_today');
-    buttonToday.addEventListener('click', getToday);
+    //buttonToday.addEventListener('click', getToday);
     
   
 

@@ -28,7 +28,7 @@
     
 };
 
-  function getCurWeekDates() {
+  export function getCurWeekDates() {
     let monday = getMonday();
   
     let arr = [];
@@ -45,7 +45,7 @@
     return arr;   
   }
   
-    function getMonday() {
+   export  function getMonday() {
     let cur = new Date();
     let day = cur.getDay(),
         diff = cur.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday

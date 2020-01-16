@@ -1,4 +1,3 @@
-
 import { createSelectTime } from './createSelectTime.js';
 
 const scheduleDays = document.querySelector('.days');

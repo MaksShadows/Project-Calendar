@@ -26,11 +26,11 @@ function switchWeeks() {
     };
     function lastWeek() {
         let monday = new Date(getItem('monday'));
-        let nextMon = new Date(new Date(monday).setDate(new Date(monday).getDate() - 7));
+        let lastMon = new Date(new Date(monday).setDate(new Date(monday).getDate() - 7));
 
-        setItem('monday', nextMon);
+        setItem('monday', lastMon);
 
-        let arr = getCurWeekDates(nextMon);
+        let arr = getCurWeekDates(lastMon);
 
         showWeek(arr);
     };

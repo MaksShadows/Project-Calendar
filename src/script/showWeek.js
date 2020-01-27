@@ -1,22 +1,17 @@
-
- function showWeek([] = getCurWeekDates()) {
+function showWeek(weekDays) {
     const days = document.querySelector('.days');
     days.innerHTML = '';
     const arrElems = [];
     const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
     const headerWeek = document.querySelector('.week');
     let WeekHTML = '';
-
-
-
         for (let i = 0; i < 7; i++) {
         const week = document.createElement('div');
-        let Weeks = getCurWeekDates();
       
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
-                <span class="day_nameDays">${Weeks[i].getDate()}</span>
+                <span class="day_nameDays">${weekDays[i].getDate()}</span>
                 <div class="LittleBorder"></div>
                 </div>`;
             week.classList.add('column-day');
@@ -28,9 +23,7 @@
     
 };
 
- export function getCurWeekDates() {
-    let monday = getMonday();
-  
+ export function getCurWeekDates(monday) {  
     let arr = [];
     arr.push(monday);
   

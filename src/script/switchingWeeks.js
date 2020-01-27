@@ -1,6 +1,7 @@
 
 import { showWeek } from './showWeek.js';
 import { getCurWeekDates } from './showWeek.js';
+import { setItem, getItem } from './storage.js';
 
 
 function switchWeeks() {
@@ -14,18 +15,15 @@ function switchWeeks() {
   
 
     function moveWeek() {
-        
-        let arr = [];
-        arr  = getCurWeekDates();
-        arr.push(arr[i].getDate());
-        day = new Date();
-        arr.setDate(day.getDate() + 7);
-    
-       showWeek();
+        let monday = new Date(getItem('monday'));
+        let nextMon = new Date(new Date(monday).setDate(new Date(monday).getDate() + 7));
 
+        setItem('monday', nextMon);
+
+        let arr = getCurWeekDates(nextMon);
+
+        showWeek(arr);
     };
-
-
 };
 
 

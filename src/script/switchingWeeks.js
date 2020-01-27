@@ -17,25 +17,6 @@ function switchWeeks() {
     function moveWeek() {
         let monday = new Date(getItem('monday'));
         let nextMon = new Date(new Date(monday).setDate(new Date(monday).getDate() + 7));
-<<<<<<< HEAD
-        
-        setItem('monday', nextMon );
-
-        let arr = getCurWeekDates(nextMon);
-
-        showWeek(arr);
-    };
-     function lastWeek() {
-         let monday = new Date(getItem('monday'));
-         let lastMon = new Date(new Date(monday).setDate(new Date(monday).getDate() - 7));
-
-         setItem('monday', lastMon);
-
-         let arr = getCurWeekDates(lastMon);
-
-         showWeek(arr);
-     };
-=======
 
         setItem('monday', nextMon);
 
@@ -43,7 +24,16 @@ function switchWeeks() {
 
         showWeek(arr);
     };
->>>>>>> 46d7ca0adbef7183fdd7595c3eaedf69916d20b1
+    function lastWeek() {
+        let monday = new Date(getItem('monday'));
+        let nextMon = new Date(new Date(monday).setDate(new Date(monday).getDate() - 7));
+
+        setItem('monday', nextMon);
+
+        let arr = getCurWeekDates(nextMon);
+
+        showWeek(arr);
+    };
 };
 
 

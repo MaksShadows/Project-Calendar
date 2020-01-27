@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 function showWeek(weekDays) {
-=======
-
- function showWeek(weekDays) {
->>>>>>> 46d7ca0adbef7183fdd7595c3eaedf69916d20b1
     const days = document.querySelector('.days');
     days.innerHTML = '';
     const arrElems = [];

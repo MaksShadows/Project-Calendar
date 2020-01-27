@@ -17,6 +17,7 @@ function switchWeeks() {
     function moveWeek() {
         let monday = new Date(getItem('monday'));
         let nextMon = new Date(new Date(monday).setDate(new Date(monday).getDate() + 7));
+<<<<<<< HEAD
         
         setItem('monday', nextMon );
 
@@ -34,6 +35,15 @@ function switchWeeks() {
 
          showWeek(arr);
      };
+=======
+
+        setItem('monday', nextMon);
+
+        let arr = getCurWeekDates(nextMon);
+
+        showWeek(arr);
+    };
+>>>>>>> 46d7ca0adbef7183fdd7595c3eaedf69916d20b1
 };
 
 

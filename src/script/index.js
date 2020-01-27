@@ -1,4 +1,3 @@
-  
 import { addContentSidebar } from './createSidebar.js';
 import { showWeek, getCurWeekDates, getMonday } from './showWeek.js';
 import { switchWeeks } from './switchingWeeks.js';
@@ -13,7 +12,4 @@ showPopupWindow();
 createEvent();
 deleteObjectEvent();
 
-
 //window.addEventListener('storage', );
-
-

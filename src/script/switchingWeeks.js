@@ -17,25 +17,24 @@ function switchWeeks() {
     function moveWeek() {
         let monday = new Date(getItem('monday'));
         let nextMon = new Date(new Date(monday).setDate(new Date(monday).getDate() + 7));
-        let lastMon = new Date(new Date(monday).setDate(new Date(monday).getDate() - 7));
       
 
-        setItem('monday', nextMon, lastMon);
+        setItem('monday', nextMon);
 
-        let arr = getCurWeekDates(nextMon, lastMon);
+        let arr = getCurWeekDates(nextMon);
 
         showWeek(arr);
     };
-    // function lastWeek() {
-    //     let monday = new Date(getItem('monday'));
+    //  function lastWeek() {
+    //      let monday = new Date(getItem('monday'));
     //     let lastMon = new Date(new Date(monday).setDate(new Date(monday).getDate() - 7));
 
-    //     setItem('monday', lastMon);
+    //      setItem('monday', lastMon);
 
     //     let arr = getCurWeekDates(lastMon);
 
-    //     showWeek(arr);
-    // };
+    //      showWeek(arr);
+    //  };
 };
 
 

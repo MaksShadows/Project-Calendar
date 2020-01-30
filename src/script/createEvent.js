@@ -1,4 +1,4 @@
-
+import { setItem, getItem } from './storage.js';
 
 
 const formFields = {
@@ -18,13 +18,21 @@ function createEvent() {
 function createObjectEvent(event) {
     event.preventDefault();
 
-const invalidFields = Object.values(formFields).find(field => {
+    const event = getItem('event') || [];
   
-    });
 
-    if (invalidFields) return;
 
-    
+    const eventStartTime = new Date(formFields.dateStart.value + 'T' + formFields.timeStart.value);
+    const eventEndTime = new Date(formFields.dateEnd.value + 'T' + formFields.timeEnd.value);
+
+
+    newEvent.name = formFields.name.value;
+    newEvent.startDate = eventStartTime;
+    newEvent.endDate = eventEndTime;
+    newEvent.description = formFields.descrip
+
+
+    Object.values(formFields).map(elem => elem.value = '');
    
     document.querySelector('.popup-alert').classList.toggle('display-none');
 };

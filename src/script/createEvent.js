@@ -22,15 +22,8 @@ function createObjectEvent(event) {
   
 
 
-    const eventStartTime = new Date(formFields.dateStart.value + 'T' + formFields.timeStart.value);
-    const eventEndTime = new Date(formFields.dateEnd.value + 'T' + formFields.timeEnd.value);
-
-
-    newEvent.name = formFields.name.value;
-    newEvent.startDate = eventStartTime;
-    newEvent.endDate = eventEndTime;
-    newEvent.description = formFields.descrip
-
+  
+    
 
     Object.values(formFields).map(elem => elem.value = '');
    

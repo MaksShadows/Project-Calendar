@@ -1,4 +1,4 @@
-import { createSelectTime } from './createSelectTime.js';
+
 
 const scheduleDays = document.querySelector('.days');
 const navigateCreateButton = document.querySelector('.navigate_create');
@@ -27,7 +27,7 @@ function showPopupWindow() {
     formFields.dateEnd.addEventListener('blur', validateValue);
     formFields.timeStart.addEventListener('blur', validateValue);
     formFields.timeEnd.addEventListener('blur', validateValue);
- 
+    
 };
 
 function hendlerClick(event) {
@@ -36,16 +36,16 @@ function hendlerClick(event) {
         showPopup()
     }
 };
-
 function validateValue(event) {
     if (!event.target.value) {
-        event.target.classList.add('invalid');
-        return;
+      event.target.classList.add('invalid');
+      return;
     }
     event.target.classList.remove('invalid');
-};
+  }
 
-function showPopup() {
+
+  function showPopup() {
     popupLayer.classList.toggle('display-none');
   
     popup.dataset.idEvent = '';
@@ -61,19 +61,19 @@ function showPopup() {
     });
   
     deleteButton.style.display = 'none';
-  }
+  };
 
-function showEditPopup(event) {
+  function showEditPopup(event) {
     showPopup();
     deleteButton.style.display = 'inline';
-
-    const idEvent = event.target.closest('.day-event').dataset.idEvent;
+  
+    const { idEvent } = event.target.closest('.day-event').dataset;
     idEventPopup.dataset.idEvent = idEvent;
-
     
+  }
 
-};
 
 
 
 export { showPopupWindow, showEditPopup };
+

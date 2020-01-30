@@ -8,7 +8,12 @@ export const setItem = (key, value) => {
 export const getItem = key => JSON.parse(localStorage.getItem(key));
 
 function getEvents() {
-    return getItemLocalStorage('listEvents') || [];
+    return getItemStorage('listEvents') || [];
+};
+
+
+function getEventById(idEvent) {
+    return getEvents().find(({ id }) => id === idEvent);
 };
 
 function addEvent(event) {
@@ -25,9 +30,6 @@ function addEvent(event) {
     updateLocalStorage('listEvents', listEvents)
 };
 
-function getEventById(idEvent) {
-    return getEvents().find(({ id }) => id === idEvent);
-};
 
 function deleteEvent(idEvent) {
     const listEvents = getEvents();

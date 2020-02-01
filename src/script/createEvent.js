@@ -1,5 +1,4 @@
-//import { setItem, getItem } from './storage.js';
-
+import { setItem, getItem } from './storage.js';
 
 
 const formFields = {
@@ -21,7 +20,12 @@ function createEvent() {
 
 function createObjectEvent(event) {
     event.preventDefault();
+ 
+ 
 
+    let newEvent = {};
+
+    
 
 
 

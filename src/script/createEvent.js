@@ -1,4 +1,3 @@
-import { setItem, getItem } from './storage.js';
 
 
 const btnSave = document.querySelector('.event__btn-save');
@@ -7,7 +6,7 @@ const btnSave = document.querySelector('.event__btn-save');
     event.preventDefault();
  
 
-    const events = getItem('events') || {};
+    let newEvent = {};
 
 
     

@@ -1,5 +1,3 @@
-
-
 const scheduleDays = document.querySelector('.days');
 const navigateCreateButton = document.querySelector('.navigate_create');
 const popupLayer = document.querySelector('.popup-alert');
@@ -70,10 +68,11 @@ function validateValue(event) {
     const { idEvent } = event.target.closest('.day-event').dataset;
     idEventPopup.dataset.idEvent = idEvent;
     
+
+  
   }
 
 
 
 
 export { showPopupWindow, showEditPopup };
-

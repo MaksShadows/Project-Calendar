@@ -1,5 +1,3 @@
-
-
 const deleteButton = document.querySelector('.event__btn-delete');
 
 function deleteObjectEvent() {

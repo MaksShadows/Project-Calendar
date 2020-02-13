@@ -3,15 +3,22 @@ function showWeek(weekDays) {
     days.innerHTML = '';
     const arrElems = [];
     const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
+    const arrMonthes = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const titleHeader = document.querySelector('.navigate__MonthAndYear');
     const headerWeek = document.querySelector('.week');
+
     let WeekHTML = '';
+    let titleHeaderText = '';
+
         for (let i = 0; i < 7; i++) {
         const week = document.createElement('div');
+
+        
       
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
-                <span class="day_nameDays">${weekDays[i].getDate()}</span>
+                <span class="day_nameDays today">${weekDays[i].getDate()}</span>
                 <div class="LittleBorder"></div>
                 </div>`;
             week.classList.add('column-day');
@@ -19,6 +26,7 @@ function showWeek(weekDays) {
           
         };
     headerWeek.innerHTML = WeekHTML;
+    titleHeader.textContent = titleHeaderText;
     days.append(...arrElems);
     
 };
@@ -44,5 +52,7 @@ function showWeek(weekDays) {
         diff = cur.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
     return new Date(cur.setDate(diff));
   }
+
+  
 
 export { showWeek };

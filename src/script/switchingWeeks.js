@@ -9,8 +9,8 @@ function switchWeeks() {
     arowsRight.addEventListener('click', moveWeek);
     const arowsLeft = document.querySelector('.navigate__arows_left');
     arowsLeft.addEventListener('click', lastWeek);
-    //const buttonToday = document.querySelector('.navigate_today');
-    //buttonToday.addEventListener('click', getToday);
+    const buttonToday = document.querySelector('.navigate_today');
+    buttonToday.addEventListener('click', getToday);
     
   
 
@@ -35,6 +35,11 @@ function switchWeeks() {
 
           showWeek(arr);
       };
+
+  function getToday() {
+    const arr = getCurWeekDates();
+    showWeek(arr);
+  };
 };
 
 

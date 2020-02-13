@@ -326,7 +326,8 @@ body {
 
 .redLine {
   position: absolute;
-  width: 100%;
+  width: 12%;
+  left: 70px;
   height: 2px;
   background-color: red;
 }

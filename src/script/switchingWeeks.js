@@ -1,4 +1,3 @@
-
 import { showWeek } from './showWeek.js';
 import { getCurWeekDates } from './showWeek.js';
 import { setItem, getItem } from './storage.js';

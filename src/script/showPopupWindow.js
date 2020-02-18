@@ -1,6 +1,5 @@
 import { createSelectTime } from './createSelectTime.js';
 
-
 const scheduleDays = document.querySelector('.days');
 const navigateCreateButton = document.querySelector('.navigate_create');
 const popupLayer = document.querySelector('.popup-alert');
@@ -24,7 +23,6 @@ function showPopupWindow() {
     popupLayer.addEventListener('click', hendlerClick);
     formFields.name.addEventListener('blur', validateValue);
     formFields.dateStart.addEventListener('blur', validateValue);
-    formFields.dateEnd.addEventListener('blur', validateValue);
     formFields.timeStart.addEventListener('blur', validateValue);
     formFields.timeEnd.addEventListener('blur', validateValue);
     
@@ -50,10 +48,10 @@ function validateValue(event) {
 
     popupLayer.classList.toggle('display-none');
   
-    popup.dataset.idEvent = '';
+    //popup.dataset.idEvent = '';
     Object.values(formFields).map((field) => {
       field.classList.remove('invalid');
-      field.value = '';
+      //field.value = '';
   
       if (field.classList.contains('event__color-picker')) {
         field.value = '#4183f1';
@@ -62,12 +60,11 @@ function validateValue(event) {
       return field;
     });
   
-    deleteButton.style.display = 'none';
   };
 
   function showEditPopup(event) {
     showPopup();
-    deleteButton.style.display = 'inline';
+ 
   
     const { idEvent } = event.target.closest('.day-event').dataset;
     idEventPopup.dataset.idEvent = idEvent;

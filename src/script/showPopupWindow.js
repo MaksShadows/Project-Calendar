@@ -1,3 +1,5 @@
+import { createSelectTime } from './createSelectTime.js';
+
 const scheduleDays = document.querySelector('.days');
 const navigateCreateButton = document.querySelector('.navigate_create');
 const popupLayer = document.querySelector('.popup-alert');
@@ -8,7 +10,6 @@ const idEventPopup = document.querySelector('.popup');
 const formFields = {
     name: document.querySelector('.event__name'),
     dateStart: document.querySelector('.event__date-start'),
-    dateEnd: document.querySelector('.event__date-end'),
     timeStart: document.querySelector('.event__time-start'),
     timeEnd: document.querySelector('.event__time-end'),
     description: document.querySelector('.event__description'),
@@ -44,6 +45,8 @@ function validateValue(event) {
 
 
   function showPopup() {
+    createSelectTime(formFields.timeStart, formFields.timeEnd);
+
     popupLayer.classList.toggle('display-none');
   
     popup.dataset.idEvent = '';

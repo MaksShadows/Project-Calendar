@@ -18,7 +18,7 @@ function showWeek(weekDays) {
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
-                <span class="day_nameDays today">${weekDays[i].getDate()}</span>
+                <span class="day_nameDays">${weekDays[i].getDate()}</span>
                 <div class="LittleBorder"></div>
                 </div>`;
             week.classList.add('column-day');

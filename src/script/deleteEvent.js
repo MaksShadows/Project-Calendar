@@ -5,10 +5,7 @@ function deleteObjectEvent() {
 };
 
 function deleteSelectedEvent(event) {
-    const idEvent = event.target.closest('.popup').dataset.idEvent;
-
-
-    
+    //const idEvent = event.target.closest('.popup').dataset.idEvent;
 
     document.querySelector('.popup-alert').classList.toggle('display-none');
 }

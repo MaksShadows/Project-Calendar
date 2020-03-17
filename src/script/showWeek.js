@@ -12,52 +12,50 @@ function showWeek(weekDays) {
     let WeekHTML = '';
     let titleHeaderText = '';
 
-        for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 7; i++) {
         const week = document.createElement('div');
 
-        
-      
+
+
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
                 <span class="day_nameDays">${weekDays[i].getDate()}</span>
                 <div class="LittleBorder"></div>
                 </div>`;
-            week.classList.add('column-day');
-            arrElems.push(week);
-          
-        };
+        week.classList.add('column-day');
+        arrElems.push(week);
+
+    };
     headerWeek.innerHTML = WeekHTML;
     titleHeader.textContent = titleHeaderText;
     days.append(...arrElems);
-    
+
 };
 
- export function getCurWeekDates(monday) {  
+export function getCurWeekDates(monday) {
     let arr = [];
     arr.push(monday);
-  
-    for(let i = 1; i < 7; i++){
+
+    for (let i = 1; i < 7; i++) {
         let nextDay = new Date();
         nextDay.setDate(monday.getDate() + i);
         arr.push(nextDay);
     }
-  
+
     console.log(arr);
-  
-    return arr;   
-  }
-  
-   export function getMonday() {
+
+    return arr;
+}
+
+export function getMonday() {
     let cur = new Date();
     let day = cur.getDay(),
         diff = cur.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
 
-        let monday = new Date(cur.setDate(diff));
-        setItem('monday', monday);
-        return monday;
-  }
-
-  
+    let monday = new Date(cur.setDate(diff));
+    setItem('monday', monday);
+    return monday;
+}
 
 export { showWeek };

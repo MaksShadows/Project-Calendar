@@ -1,3 +1,5 @@
+import { setItem } from './storage.js';
+
 function showWeek(weekDays) {
     const days = document.querySelector('.days');
     days.innerHTML = '';
@@ -50,7 +52,10 @@ function showWeek(weekDays) {
     let cur = new Date();
     let day = cur.getDay(),
         diff = cur.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
-    return new Date(cur.setDate(diff));
+
+        let monday = new Date(cur.setDate(diff));
+        setItem('monday', monday);
+        return monday;
   }
 
   

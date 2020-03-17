@@ -23,11 +23,11 @@
 
     &__picker {
         display: flex;
-        margin: 45px 0;
+        margin: 45px;
         align-items: center;
         position: relative;
     }
-
+   
     &__color-picker {
         margin: 45px 0 0 45px;
         text-align: left;
@@ -42,6 +42,9 @@
         right: 10px;
         top: -3px;
     }
+}
+.popup__description {
+    margin-left: 50px;
 }
 
 .event {
@@ -121,7 +124,7 @@
 
 .multilineText {
     position: absolute;
-    left: 10px;
+    left: 55px;
     width: 30px;
     height: 30px;
 }

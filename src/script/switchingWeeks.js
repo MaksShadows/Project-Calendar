@@ -16,7 +16,8 @@ function switchWeeks() {
     function moveWeek() {
         let monday = new Date(getItem('monday'));
         let nextMon = new Date(new Date(monday).setDate(new Date(monday).getDate() + 7));
-      
+
+        debugger;
 
         setItem('monday', nextMon);
 
@@ -36,7 +37,7 @@ function switchWeeks() {
       };
 
   function getToday() {
-    const arr = getCurWeekDates();
+//const arr = getCurWeekDates();
     showWeek(arr);
   };
 };

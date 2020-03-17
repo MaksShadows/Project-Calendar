@@ -19,13 +19,16 @@
     padding: 16px 16px 8px;
     border-radius: 8px;
     text-align: right;
-    background-color: #fff;
+    background-color: #f0efef;
 
     &__picker {
         display: flex;
         margin: 45px;
         align-items: center;
         position: relative;
+    }
+    &__description {
+        margin-left: 50px;
     }
    
     &__color-picker {
@@ -42,9 +45,6 @@
         right: 10px;
         top: -3px;
     }
-}
-.popup__description {
-    margin-left: 50px;
 }
 
 .event {

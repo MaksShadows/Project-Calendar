@@ -200,13 +200,16 @@ body {
   padding: 16px 16px 8px;
   border-radius: 8px;
   text-align: right;
-  background-color: #fff;
+  background-color: #f0efef;
 }
 .popup__picker {
   display: flex;
   margin: 45px;
   align-items: center;
   position: relative;
+}
+.popup__description {
+  margin-left: 50px;
 }
 .popup__color-picker {
   margin: 45px 0 0 45px;
@@ -219,10 +222,6 @@ body {
   position: absolute;
   right: 10px;
   top: -3px;
-}
-
-.popup__description {
-  margin-left: 50px;
 }
 
 .event__name {

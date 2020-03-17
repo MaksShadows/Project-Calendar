@@ -189,7 +189,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #89898961;
+  background-color: #a88e8e61;
 }
 
 .popup {
@@ -200,7 +200,7 @@ body {
   padding: 16px 16px 8px;
   border-radius: 8px;
   text-align: right;
-  background-color: #f0efef;
+  background-color: rgba(218, 213, 213, 0.829);
 }
 .popup__picker {
   display: flex;
@@ -234,9 +234,10 @@ body {
   outline: none;
   margin-top: 30px;
 }
-.event__date-start, .event__date-end {
-  padding: 2px;
+.event__date-start {
+  padding: 4px;
   margin-left: 18px;
+  margin-right: 10px;
   border: none;
   background-size: contain;
   outline: none;
@@ -246,7 +247,7 @@ body {
   border: none;
   background-size: contain;
   outline: none;
-  padding: 2px;
+  padding: 4px;
   background-color: #fff;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -276,6 +277,7 @@ body {
   position: relative;
   height: 40px;
   display: flex;
+  margin-top: 20px;
 }
 
 .clock {

@@ -8,7 +8,8 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #89898961;
+    background-color:  #a88e8e61;
+   
 }
 
 .popup {
@@ -19,7 +20,7 @@
     padding: 16px 16px 8px;
     border-radius: 8px;
     text-align: right;
-    background-color: #f0efef;
+    background-color: rgba(218, 213, 213, 0.829);
 
     &__picker {
         display: flex;
@@ -27,6 +28,7 @@
         align-items: center;
         position: relative;
     }
+
     &__description {
         margin-left: 50px;
     }
@@ -47,6 +49,7 @@
     }
 }
 
+
 .event {
 
     &__name {
@@ -60,10 +63,10 @@
         margin-top: 30px;
     }
 
-    &__date-start,
-    &__date-end {
-        padding: 2px;
+    &__date-start {
+        padding: 4px;
         margin-left: 18px;
+        margin-right: 10px;
         border: none;
         background-size: contain;
         outline: none;
@@ -75,7 +78,7 @@
         border: none;
         background-size: contain;
         outline: none;
-        padding: 2px;
+        padding: 4px;
         background-color: #fff;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -108,6 +111,7 @@
     position: relative;
     height: 40px;
     display: flex;
+    margin-top: 20px;
 }
 
 .clock {

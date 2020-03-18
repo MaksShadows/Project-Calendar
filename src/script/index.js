@@ -5,6 +5,7 @@ import { showPopupWindow } from './showPopupWindow.js';
 import { eventHandler } from './createEvent.js';
 import { deleteObjectEvent } from './deleteEvent.js';
 import { renderRedLine } from './redLine.js';
+import { renderEvent } from './renderEvent.js';
 
 
 addContentSidebar();

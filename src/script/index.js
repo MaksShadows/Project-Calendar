@@ -15,5 +15,6 @@ showPopupWindow();
 eventHandler();
 deleteObjectEvent();
 renderRedLine();
+renderEvent();
 
 //window.addEventListener('storage', );

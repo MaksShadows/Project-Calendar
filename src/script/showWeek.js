@@ -71,9 +71,4 @@ export function getMonday() {
     return monday;
 }
 
-
-
-
-
-
 export { showWeek };

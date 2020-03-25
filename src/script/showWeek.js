@@ -2,7 +2,7 @@ import { setItem } from './storage.js';
 
 function showWeek(weekDays) {
     const days = document.querySelector('.calendar__week');
-    days.innerHTML = '';
+     days.innerHTML = '';
     const arrElems = [];
     const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
     const arrMonthes = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -10,12 +10,12 @@ function showWeek(weekDays) {
     const headerWeek = document.querySelector('.week');
 
     let WeekHTML = '';
+    let titleHeaderText = '';
 
     for (let i = 0; i < 7; i++) {
         const week = document.createElement('div');
         week.classList.add('column-day');
-        
-
+       
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
@@ -26,13 +26,12 @@ function showWeek(weekDays) {
         arrElems.push(week);
         
     };
-
     headerWeek.innerHTML = WeekHTML;
+    titleHeader.textContent = titleHeaderText;
     days.append(...arrElems);
 
 };
 
-// const arrMonthes = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 // const titleHeader = document.querySelector('.navigate__MonthAndYear');
 // let  today = new Date();
 
@@ -45,6 +44,16 @@ function showWeek(weekDays) {
 // }
 
 
+//color current day
+// export const markCurrentDay = () => {
+//     const weekDaysElems = document.querySelectorAll('.day_nameDays');
+//     let current;
+//     new Date().getDay() - 1 < 0 ? currentNumberDay = 6 : current = new Date().getDay() - 1;
+//     const findDay = [...weekDaysElems].find(arg => arg.dataset);
+   
+// }
+
+markCurrentDay();
 
 export function getCurWeekDates(monday) {
     let arr = [];
@@ -70,5 +79,6 @@ export function getMonday() {
     setItem('monday', monday);
     return monday;
 }
+
 
 export { showWeek };

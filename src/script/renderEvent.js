@@ -1,6 +1,4 @@
 
-import { setItem, getItem } from './storage.js';
-import { showPopupWindow } from './showPopupWindow.js';
 
 function renderEvent() {
 

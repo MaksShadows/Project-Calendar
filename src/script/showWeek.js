@@ -1,8 +1,8 @@
 import { setItem } from './storage.js';
 
 function showWeek(weekDays) {
-    const days = document.querySelector('.days');
-     days.innerHTML = '';
+    const days = document.querySelector('.calendar__week');
+    days.innerHTML = '';
     const arrElems = [];
     const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
     const arrMonthes = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -10,12 +10,12 @@ function showWeek(weekDays) {
     const headerWeek = document.querySelector('.week');
 
     let WeekHTML = '';
-    let titleHeaderText = '';
 
     for (let i = 0; i < 7; i++) {
         const week = document.createElement('div');
         week.classList.add('column-day');
-       
+        
+
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
@@ -26,11 +26,23 @@ function showWeek(weekDays) {
         arrElems.push(week);
         
     };
+
     headerWeek.innerHTML = WeekHTML;
-    titleHeader.textContent = titleHeaderText;
     days.append(...arrElems);
 
 };
+
+// const arrMonthes = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+// const titleHeader = document.querySelector('.navigate__MonthAndYear');
+// let  today = new Date();
+
+// function generateMonth() {
+//     const titleHeader = document.querySelector('.navigate__MonthAndYear');
+
+//     let currMonth = month[new Date(today).getMonth()];
+//     arrMonthes.textContent = `${currMonth} ${today.getFullYear()}`;
+
+// }
 
 
 

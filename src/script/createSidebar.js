@@ -14,6 +14,4 @@ function addContentSidebar() {
 
     sidebar.append(...arrHoursElems);
 };
-
-
 export { addContentSidebar };

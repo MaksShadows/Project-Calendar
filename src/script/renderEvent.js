@@ -10,14 +10,6 @@ function renderEvent() {
  // document.querySelector('.day-event').setAttribute('data-id-event', event.id);
 
 
-
-
-
-
-
-
-
-
 } ;
 
 

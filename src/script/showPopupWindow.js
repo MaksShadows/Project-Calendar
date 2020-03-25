@@ -1,6 +1,6 @@
 import { createSelectTime } from './createSelectTime.js';
 
-const scheduleDays = document.querySelector('.days');
+const scheduleDays = document.querySelector('.calendar__week');
 const navigateCreateButton = document.querySelector('.navigate_create');
 const popupLayer = document.querySelector('.popup-alert');
 const buttonClose = document.querySelector('.popup__btn-close');

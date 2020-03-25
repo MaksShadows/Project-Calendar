@@ -148,17 +148,14 @@ body {
   flex-direction: column;
   color: #70757a;
 }
-.sidebar :first-child .hour__text {
-  display: none;
-}
-
-.hour {
+.sidebar__hour {
   height: 42px;
   width: 55px;
-}
-.hour__text {
   display: block;
   margin: -9px 0 0 10px;
+}
+.sidebar :first-child .sidebar__hour {
+  display: none;
 }
 
 .calendar__week {
@@ -350,4 +347,4 @@ body {
   background-color: red;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.css%5D.map */

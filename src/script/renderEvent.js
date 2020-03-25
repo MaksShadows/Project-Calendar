@@ -11,7 +11,6 @@ function renderEvent() {
    
   // event.setAttribute('data-id-event', event.id);
 
-//const event = `<div class ='day-event' id='${event.id}'  data-id-event= '${event.id}'>`
 
 
 

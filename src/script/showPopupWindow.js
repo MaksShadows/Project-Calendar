@@ -43,7 +43,7 @@ function validateValue(event) {
 
 
   function showPopup() {
-    createSelectTime(formFields.timeStart, formFields.timeEnd);
+    //createSelectTime(formFields.timeStart, formFields.timeEnd);
 
     popupLayer.classList.toggle('display-none');
   

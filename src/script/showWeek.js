@@ -62,15 +62,6 @@ export function getMonday() {
 
 
 
-//  export function markDay () {
-//     const weekElem = document.querySelector('.day_nameDays');
-//     let currenDay;
-//      new Date().getDay -1 < 0 ? currenDay = 6 : currenDay = new Date() -1;
-//      const findDay = [... weekElem].find();
-//      if (findDay !== undefined) {
-//          findDay.classList.add('today')
-//      };
-// };
-//   markDay();
+
 
 export { showWeek };

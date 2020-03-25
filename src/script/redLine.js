@@ -1,4 +1,4 @@
- export let interval;
+export let interval;
 
 export function startLine(){
   renderRedLine();

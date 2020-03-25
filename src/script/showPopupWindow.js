@@ -4,8 +4,7 @@ const scheduleDays = document.querySelector('.days');
 const navigateCreateButton = document.querySelector('.navigate_create');
 const popupLayer = document.querySelector('.popup-alert');
 const buttonClose = document.querySelector('.popup__btn-close');
-const deleteButton = document.querySelector('.event__btn-delete');
-const idEventPopup = document.querySelector('.popup');
+const popup = document.querySelector('.popup');
 
 const formFields = {
     name: document.querySelector('.event__name'),
@@ -48,10 +47,10 @@ function validateValue(event) {
 
     popupLayer.classList.toggle('display-none');
   
-    //popup.dataset.idEvent = '';
+    popup.dataset.idEvent = '';
     Object.values(formFields).map((field) => {
       field.classList.remove('invalid');
-      //field.value = '';
+      field.value = '';
   
       if (field.classList.contains('event__color-picker')) {
         field.value = '#4183f1';
@@ -62,18 +61,8 @@ function validateValue(event) {
   
   };
 
-  function showEditPopup(event) {
-    showPopup();
  
-  
-    const { idEvent } = event.target.closest('.day-event').dataset;
-    idEventPopup.dataset.idEvent = idEvent;
-    
-
-  
-  }
 
 
 
-
-export { showPopupWindow, showEditPopup };
+export { showPopupWindow };

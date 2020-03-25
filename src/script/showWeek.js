@@ -25,7 +25,7 @@ function showWeek(weekDays) {
                 </div>`;
         week.classList.add('column-day');
         arrElems.push(week);
-
+        
     };
     headerWeek.innerHTML = WeekHTML;
     titleHeader.textContent = titleHeaderText;
@@ -57,5 +57,17 @@ export function getMonday() {
     setItem('monday', monday);
     return monday;
 }
+
+
+//  export function markDay () {
+//     const weekElem = document.querySelector('.day_nameDays');
+//     let currenDay;
+//      new Date().getDay -1 < 0 ? currenDay = 6 : currenDay = new Date() -1;
+//      const findDay = [... weekElem].find();
+//      if (findDay !== undefined) {
+//          findDay.classList.add('today')
+//      };
+// };
+//   markDay();
 
 export { showWeek };

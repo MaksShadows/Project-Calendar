@@ -7,7 +7,7 @@ import { deleteObjectEvent } from './deleteEvent.js';
 import { renderRedLine } from './redLine.js';
 import { renderEvent } from './renderEvent.js';
 
-
+document.addEventListener('DOMContentLoaded', () => {
 addContentSidebar();
 showWeek(getCurWeekDates(getMonday()));
 switchWeeks();
@@ -16,5 +16,6 @@ eventHandler();
 deleteObjectEvent();
 renderRedLine();
 renderEvent();
+});
 
 //window.addEventListener('storage', );

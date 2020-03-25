@@ -1,23 +1,25 @@
 
-function renderEvent(event) {
+import { setItem, getItem } from './storage.js';
+import { showPopupWindow } from './showPopupWindow.js';
 
-  const newEvents = [];
+function renderEvent() {
 
+   //const newEvents = [];
 
-  //  return newEvents.map(event => {
-  //   const event = document.createElement('div');
-  //   event.classList.add('day-event');
-  //   event.setAttribute('data-id-event', event.id);
+   //const event = document.createElement('div');
+   // event.classList.add('day-event');
+   
+  // event.setAttribute('data-id-event', event.id);
 
-  //   const title = document.createElement('div');
-  //   title.classList.add('day-event__title');
-
-  //   const title = event.title
-    
-  // });
+//const event = `<div class ='day-event' id='${event.id}'  data-id-event= '${event.id}'>`
 
 
-} 
+
+
+
+
+
+} ;
 
 
 export { renderEvent}

@@ -8,7 +8,9 @@ function renderEvent() {
    //const event = document.createElement('div');
    // event.classList.add('day-event');
    
-  // event.setAttribute('data-id-event', event.id);
+ // document.querySelector('.day-event').setAttribute('data-id-event', event.id);
+
+
 
 
 

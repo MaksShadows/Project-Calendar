@@ -1,5 +1,3 @@
-export { getEvents, addEvent,  getEventById, deleteEvent,   };
-
 
 export const setItem = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value));
@@ -7,40 +5,10 @@ export const setItem = (key, value) => {
 
 export const getItem = key => JSON.parse(localStorage.getItem(key));
 
-function getEvents() {
-    return getItemStorage('listEvents') || [];
-};
-
-
-function getEventById(idEvent) {
-    return getEvents().find(({ id }) => id === idEvent);
-};
-
-function addEvent(event) {
-    const listEvents = getEvents();
-    listEvents.push({
-        id: event.id,
-        name: event.name,
-        createDate: new Date(),
-        startDate: event.startDate,
-        endDate: event.endDate,
-        description: event.description,
-        color: event.color,
-    });
-    updateLocalStorage('listEvents', listEvents)
-};
-
-
-function deleteEvent(idEvent) {
-    const listEvents = getEvents();
-    let indexEvent = undefined;
-    listEvents.find(({ id }, index) => {
-        if (id === idEvent) {
-            indexEvent = index;
-            return true;
-        }
-    });
-    listEvents.splice(indexEvent, 1);
-
-    updateLocalStorage('listEvents', listEvents)
-};
+const eventExample = {
+    id: 0.7520027086457333, // id понадобится для работы с событиями
+    title: 'Title',
+    description: 'dddd',
+    start: new Date('2020-03-17T01:10:00.000Z'),
+    end: new Date('2020-03-17T04:30:00.000Z'),
+}

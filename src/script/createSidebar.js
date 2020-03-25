@@ -2,7 +2,7 @@ function addContentSidebar() {
     const sidebar = document.querySelector('.sidebar');
     const arrHoursElems = [];
 
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 24; i++) {
         const blockHuor = document.createElement('div');
         blockHuor.classList.add('hour');
         const huorText = document.createElement('span');
@@ -14,5 +14,6 @@ function addContentSidebar() {
 
     sidebar.append(...arrHoursElems);
 };
+
 
 export { addContentSidebar };

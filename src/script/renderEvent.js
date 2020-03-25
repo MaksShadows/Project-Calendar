@@ -1,6 +1,5 @@
 
 
-
 function renderEvent() {
 
    //const newEvents = [];

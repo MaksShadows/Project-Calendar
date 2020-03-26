@@ -1,4 +1,4 @@
-import { addContentSidebar } from './createSidebar.js';
+import { addContentSidebar } from './createTable.js';
 import { showWeek, getCurWeekDates, getMonday } from './showWeek.js';
 import { switchWeeks } from './switchingWeeks.js';
 import { showPopupWindow } from './showPopupWindow.js';

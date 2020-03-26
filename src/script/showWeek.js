@@ -1,8 +1,8 @@
 import { setItem } from './storage.js';
 
 function showWeek(weekDays) {
-    const days = document.querySelector('.calendar__week');
-     days.innerHTML = '';
+   // const days = document.querySelector('.calendar__week');
+    // days.innerHTML = '';
     const arrElems = [];
     const arrWeeks = ["Mon", "Tue", "Wen", "Tuh", "Fri", "Sat", "Sun"];
     const arrMonthes = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -14,8 +14,9 @@ function showWeek(weekDays) {
 
     for (let i = 0; i < 7; i++) {
         const week = document.createElement('div');
-        week.classList.add('column-day');
-       
+       week.classList.add('column-day')
+
+    
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
@@ -28,9 +29,12 @@ function showWeek(weekDays) {
     };
     headerWeek.innerHTML = WeekHTML;
     titleHeader.textContent = titleHeaderText;
-    days.append(...arrElems);
+    //days.append(...arrElems);
 
 };
+
+
+
 
 // const titleHeader = document.querySelector('.navigate__MonthAndYear');
 // let  today = new Date();

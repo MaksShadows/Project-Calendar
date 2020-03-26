@@ -19,30 +19,27 @@
 .hour {
     height: 42px;
     width: 55px;
-    
-    &__text {
-        display: block;
-        margin: -9px 0 0 10px;
-    }
+    display: block;
+    margin: 21px 0 0 8px;
 }
-
 
 .calendar__week {
     display: flex;
     width: 100%;
-    padding-left: 5px;
-    background: repeating-linear-gradient(180deg,
-            #dadce0,
-            #dadce0 1px,
-            #fff 1px,
-            #fff 42px);
+    //padding-left: 5px;
+  
 }
 
 .column-day {
     position: relative;
     width: 100%;
-    border-left: 1px solid #dadce0;
+    &__item{
+        height: 60px;
+        border-left: 1px solid #dadce0;
+        border-bottom: 1px solid #dadce0;
+    }
 }
+
 .day_nameDays {
     padding-top: 8px;
     font-size: 20px;

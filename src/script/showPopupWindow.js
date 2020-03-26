@@ -29,7 +29,7 @@ function showPopupWindow() {
 
 function hendlerClick(event) {
     if (event.target.classList.contains('popup-alert') ||
-        event.target.classList.contains('column-day')) {
+        event.target.classList.contains('column-day__item'))  {
         showPopup()
     }
 };

@@ -1,3 +1,5 @@
+import { setItem } from './storage.js';
+
 export const createNumbersArray = (from, to) => {
     const result = [];
 
@@ -8,13 +10,21 @@ export const createNumbersArray = (from, to) => {
     return result;
 };
   
-export let today = new Date();
+export function getMonday() {
+    let cur = new Date();
+    let day = cur.getDay(),
+        diff = cur.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
+
+    let monday = new Date(cur.setDate(diff));
+    setItem('monday', monday);
+    return monday;
+}
 
 const getDays = () => {
     const result = [];
     createNumbersArray(0, 6).map(day => {
 
-        const newDay = new Date(today);
+        const newDay = new Date(getMonday());
         newDay.setDate(newDay.getDate() + day);
         result.push(`
             <div

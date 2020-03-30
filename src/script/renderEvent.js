@@ -1,4 +1,5 @@
 import { setItem, getItem } from './storage.js';
+
 import shmoment from './shmoment.js';
 
 
@@ -8,6 +9,16 @@ function renderEvent(event) {
 
     const startEvent = getItem('displayedWeekStart');
      const endEvent = shmoment(startDateTime)
+     const event = getItem('events') || [];
+
+     setItem('events', [{
+      id: 0.752, // id понадобится для работы с событиями
+      title: 'Title',
+      description: 'Event - description',
+      start: new Date('2020-03-17T01:10:00.000Z'),
+      end: new Date('2020-03-17T04:30:00.000Z'),
+     }]);
+
 
     event.map(({title, eventDescription, eventTimeStart, entTimeEnd}) => {
 
@@ -41,9 +52,8 @@ function renderEvent(event) {
         );
         slotElem.append(eventElem);
    });
-
-
 } ;
+ renderEvent() ;
 
 
 export { renderEvent}

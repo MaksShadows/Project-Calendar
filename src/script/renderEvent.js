@@ -6,6 +6,9 @@ function renderEvent(event) {
 
   //const newEvents = [];
 
+    const startEvent = getItem('displayedWeekStart');
+     const endEvent = shmoment(startDateTime)
+
     event.map(({title, eventDescription, eventTimeStart, entTimeEnd}) => {
 
      const eventNew = document.createElement('div');

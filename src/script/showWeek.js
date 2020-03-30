@@ -1,4 +1,5 @@
 import { setItem } from './storage.js';
+//import { getDisplayedMonth } from './storage.js';
 
 function showWeek(weekDays) {
    // const days = document.querySelector('.calendar__week');
@@ -14,21 +15,22 @@ function showWeek(weekDays) {
 
     for (let i = 0; i < 7; i++) {
         const week = document.createElement('div');
-       week.classList.add('column-day')
+       //week.classList.add('column-day')
 
     
         WeekHTML +=
             `<div class="day">
                 <span class="day_nameDay">${arrWeeks[i]}</span>
-                <span class="day_nameDays">${weekDays[i].getDate()}</span>
+                <span class="day_nameDays" >${weekDays[i].getDate()}</span>
                 <div class="LittleBorder"></div>
-                </div>`;
+                </div>
+                `;
       
         arrElems.push(week);
         
     };
     headerWeek.innerHTML = WeekHTML;
-    titleHeader.textContent = titleHeaderText;
+    titleHeader.innerHTML = titleHeaderText;
     //days.append(...arrElems);
 
 };

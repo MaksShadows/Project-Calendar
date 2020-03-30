@@ -30,6 +30,7 @@ const getDays = () => {
             <div
                 class="column-day"
                 data-day="${new Date(newDay).getDate()}"
+
             >${getItem()}</div>
         `);
     });

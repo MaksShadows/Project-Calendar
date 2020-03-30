@@ -18,7 +18,6 @@ redlineElem.append(redLine);
   const min = new Date().getMinutes();
 
   redlineElem.style.top = `${60 * hours + min}px`;
-
 };
 
 

@@ -11,8 +11,6 @@ const eventHandler = (event) => {
      const eventendTime = document.querySelector('.event__time-end ');
      const eventDescription = document.querySelector('.event__description');
 
-
-
      alert(JSON.stringify(formData));
      document.querySelector('.popup-alert').classList.toggle('display-none');
    };

@@ -11,7 +11,6 @@ function renderEvent(event) {
      
      //eventNew = document.querySelector(`div[data-time = "${ }"]`);
 
-
      const eventTime = document.createElement('div');
      eventTime.append(`${new Date(eventTimeStart)} - ${new Date(entTimeEnd)}`);
 
@@ -20,7 +19,6 @@ function renderEvent(event) {
      eventNew.innerHTML = `${title}`;
      eventNew.innerHTML = `${eventTime}`;
      eventNew.innerHTML = `${eventDescription}`;
-
 
   });
 

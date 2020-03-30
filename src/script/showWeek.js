@@ -37,30 +37,6 @@ function showWeek(weekDays) {
 
 
 
-
-// const titleHeader = document.querySelector('.navigate__MonthAndYear');
-// let  today = new Date();
-
-// function generateMonth() {
-//     const titleHeader = document.querySelector('.navigate__MonthAndYear');
-
-//     let currMonth = month[new Date(today).getMonth()];
-//     arrMonthes.textContent = `${currMonth} ${today.getFullYear()}`;
-
-// }
-
-
-//color current day
-// export const markCurrentDay = () => {
-//     const weekDaysElems = document.querySelectorAll('.day_nameDays');
-//     let current;
-//     new Date().getDay() - 1 < 0 ? currentNumberDay = 6 : current = new Date().getDay() - 1;
-//     const findDay = [...weekDaysElems].find(arg => arg.dataset);
-   
-// }
-
-//markCurrentDay();
-
 export function getCurWeekDates(monday) {
     let arr = [];
     arr.push(monday);

@@ -1,9 +1,8 @@
 import { setItem, getItem } from './storage.js';
-
 import shmoment from './shmoment.js';
 
 
-function renderEvent(event) {
+function renderEvent() {
 
   //const newEvents = [];
 
@@ -53,7 +52,7 @@ function renderEvent(event) {
         slotElem.append(eventElem);
    });
 } ;
- renderEvent() ;
+
 
 
 export { renderEvent}
